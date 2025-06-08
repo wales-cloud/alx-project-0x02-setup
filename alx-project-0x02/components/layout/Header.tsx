@@ -1,16 +1,17 @@
-import Link from 'next/link';
+import Head from 'next/head';
+import Header from '@/components/layout/Header';
 
-const Header = () => {
+export default function PostsPage() {
   return (
-    <header className="bg-blue-600 text-white p-4 flex justify-between items-center">
-      <h1 className="text-xl font-bold">ALX Project</h1>
-      <nav className="space-x-4">
-        <Link href="/" className="hover:underline">Home</Link>
-        <Link href="/home" className="hover:underline">Custom Home</Link>
-        <Link href="/about" className="hover:underline">About</Link>
-      </nav>
-    </header>
+    <>
+      <Head>
+        <title>Posts Page</title>
+      </Head>
+      <Header />
+      <main className="p-8">
+        <h1 className="text-3xl font-bold">Posts Page</h1>
+        <p>This is the placeholder for fetching and displaying posts.</p>
+      </main>
+    </>
   );
-};
-
-export default Header;
+}
